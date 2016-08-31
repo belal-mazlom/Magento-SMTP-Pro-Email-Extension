@@ -26,7 +26,8 @@ class Aschroder_SMTPPro_Model_Transports_Ses {
             array(
                 'accessKey' => $_helper->getAmazonSESAccessKey($storeId),
                 'privateKey' => $_helper->getAmazonSESPrivateKey($storeId)
-            )
+            ),
+            $_helper->getAmazonSESEndpoint($storeId);
         );
 
         return $emailTransport;
